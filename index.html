@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Простий гід зі створення Telegram-ботів: від першої ідеї до запуску.">
+  <title>BotCraft — Створюй Telegram-ботів</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#top"><span class="brand-icon">✦</span> BotCraft</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Відкрити меню">☰</button>
+    <nav id="nav">
+      <a href="#about">Про ботів</a>
+      <a href="#steps">Як створити</a>
+      <a href="#tools">Інструменти</a>
+      <a class="nav-button" href="#start">Почати навчання <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> ТВОРИ СВОЇ ЦИФРОВІ ПРОЄКТИ</div>
+        <h1>Твоя ідея.<br><span>Твій Telegram-бот.</span></h1>
+        <p class="hero-text">Навчися створювати Telegram-ботів крок за кроком — від першого повідомлення до власного корисного сервісу.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#steps">Дізнатися, як це працює <span>→</span></a>
+          <a class="text-link" href="#tools">Що знадобиться?</a>
+        </div>
+        <div class="hero-note"><span class="check">✓</span> Для початківців · Практичний підхід · Python</div>
+      </div>
+      <div class="hero-art" aria-label="Ілюстрація Telegram-бота">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="bot-card">
+          <div class="bot-top"><span class="bot-avatar">✦</span><div><b>BotCraft Assistant</b><small>бот · онлайн</small></div><span class="dots">•••</span></div>
+          <div class="chat-date">СЬОГОДНІ</div>
+          <div class="bubble incoming">Привіт! 👋<br>Я твій перший Telegram-бот.</div>
+          <div class="bubble outgoing">Що ти вмієш робити?</div>
+          <div class="bubble incoming">Відповідати на команди, надсилати повідомлення та допомагати людям ✨</div>
+          <div class="fake-input"><span>Написати повідомлення...</span><b>➤</b></div>
+        </div>
+        <div class="float-tag tag-code"><span>⌘</span> Python</div>
+        <div class="float-tag tag-telegram"><span>➤</span> Telegram API</div>
+        <div class="sparkle">✧</div>
+      </div>
+    </section>
+
+    <section class="stats section-wrap">
+      <div><strong>01</strong><span>Ідея та план</span></div>
+      <div><strong>02</strong><span>Перший код</span></div>
+      <div><strong>03</strong><span>Тестування</span></div>
+      <div><strong>04</strong><span>Запуск бота</span></div>
+    </section>
+
+    <section class="section section-wrap" id="about">
+      <div class="section-heading">
+        <div class="eyebrow">ПОЧНИ З ОСНОВ</div>
+        <h2>Що таке Telegram-бот?</h2>
+        <p>Це програма, яка працює всередині Telegram і виконує завдання автоматично — за командами або повідомленнями користувача.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon violet">✉</div><h3>Спілкується</h3><p>Відповідає на повідомлення, команди та запитання.</p></article>
+        <article class="feature-card"><div class="feature-icon blue">⚡</div><h3>Автоматизує</h3><p>Виконує повторювані дії без постійної участі людини.</p></article>
+        <article class="feature-card"><div class="feature-icon mint">▦</div><h3>Допомагає</h3><p>Приймає заявки, надсилає нагадування та показує інформацію.</p></article>
+      </div>
+    </section>
+
+    <section class="section steps-section" id="steps">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div class="eyebrow">ТВІЙ МАРШРУТ</div>
+          <h2>Як створити свого бота?</h2>
+          <p>Розбий велику ідею на невеликі зрозумілі кроки.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-number">01</div><div><h3>Придумай ідею</h3><p>Визнач, кому допомагатиме бот і яку проблему він вирішуватиме. Запиши 2–3 основні функції.</p><span class="step-tip">Порада: почни з однієї корисної функції.</span></div></article>
+          <article class="step"><div class="step-number">02</div><div><h3>Створи бота в BotFather</h3><p>У Telegram знайди офіційного бота <b>@BotFather</b>, створи нового бота та отримай токен доступу. Не публікуй токен і не надсилай його стороннім.</p></div></article>
+          <article class="step"><div class="step-number">03</div><div><h3>Підготуй Python</h3><p>Встанови Python і редактор коду, наприклад Visual Studio Code або PyCharm. Для роботи з Telegram можна використати бібліотеку aiogram.</p></div></article>
+          <article class="step"><div class="step-number">04</div><div><h3>Напиши та перевір код</h3><p>Додай обробку команди /start, відповіді на повідомлення й кнопки. Перевір, чи бот правильно реагує на різні дії.</p></div></article>
+          <article class="step"><div class="step-number">05</div><div><h3>Запусти проєкт</h3><p>Під час розробки бот може працювати на твоєму комп’ютері. Щоб він був онлайн постійно, згодом можна розмістити його на сервері.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-wrap" id="tools">
+      <div class="section-heading">
+        <div class="eyebrow">НАБІР РОЗРОБНИКА</div>
+        <h2>Що знадобиться?</h2>
+        <p>Для першого навчального бота достатньо кількох інструментів.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool"><div class="tool-logo python">Py</div><div><h3>Python</h3><p>Мова програмування, якою можна написати логіку бота.</p><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">Офіційний сайт ↗</a></div></div>
+        <div class="tool"><div class="tool-logo telegram">➤</div><div><h3>Telegram та BotFather</h3><p>Створення бота й отримання токена для підключення.</p><a href="https://t.me/BotFather" target="_blank" rel="noopener">Відкрити BotFather ↗</a></div></div>
+        <div class="tool"><div class="tool-logo code">⌘</div><div><h3>VS Code або PyCharm</h3><p>Редактор, у якому зручно писати та запускати код.</p><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Завантажити VS Code ↗</a></div></div>
+        <div class="tool"><div class="tool-logo aiogram">A</div><div><h3>aiogram</h3><p>Python-бібліотека для створення Telegram-ботів.</p><a href="https://docs.aiogram.dev/" target="_blank" rel="noopener">Документація ↗</a></div></div>
+      </div>
+    </section>
+
+    <section class="cta-section section-wrap" id="start">
+      <div class="cta">
+        <div class="eyebrow">ЧАС ДІЯТИ</div>
+        <h2>Найкращий спосіб навчитися — створити власного бота.</h2>
+        <p>Обери просту ідею, зроби перший крок і поступово додавай нові можливості.</p>
+        <a class="button light" href="https://t.me/BotFather" target="_blank" rel="noopener">Створити бота в Telegram <span>↗</span></a>
+        <div class="cta-decoration">✳</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#top"><span class="brand-icon">✦</span> BotCraft</a>
+    <p>Навчайся. Створюй. Автоматизуй.</p>
+    <span>© <span id="year"></span> BotCraft. Навчальний проєкт.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
